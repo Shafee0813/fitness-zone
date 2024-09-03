@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .smaller-text {
+    @apply max-sm:text-base max-md:text-lg text-xl; 
+  }
+  .regular-text{
+    @apply max-sm:text-base max-md:text-xl text-2xl;
+  }
+  .heading-text{
+    @apply max-sm:text-xl max-md:text-3xl text-4xl;
+  }
+  .input {
+    @apply outline-none border-none bg-slate-50 p-2 leading-none px-4 text-black;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: white;
+  background-color: black;
+}
+.bg-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.676), rgba(0, 0, 0, 0.374) ), url(./assets/bgs/bg1.jpg);
+}
+.bg-nav {
+  background-color: rgba(0, 0, 0, 0.509);
+}
+.nav-links {
+  position: relative;
+}
+.nav-links:after {
+  content: '';
+  width: 0%;
+  height : 3px;
+  background: rgb(154, 154, 154);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+.nav-links:hover {
+  color:rgb(230, 230, 230)
+}
+.nav-links:hover:after {
+  width:100%
+}
+.nav-links-menu {
+  position: relative;
+}
+.nav-links-menu:hover {
+  color:rgb(230, 230, 230)
+}
+.nav-links-menu:after {
+  content: '';
+  width: 0%;
+  height : 3px;
+  background: rgb(230,230,230);
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: 0.3s;
+}
+
+.nav-links-menu:hover:after {
+  width:100%
+}
+.nav-toggle {
+  /* padding: 30px; */
+  border-radius: 50%;
+  transition: 0.25s;
+}
+.nav-toggle:hover {
+  background-color: rgb(53, 53, 53);
+}
+
+.off-black{
+  background-color: rgb(19, 19, 19);
+}
+
+@media not all and (min-width: 425px) {
+  .card-button {
+    left : 20px;
+    max-width: 270px;
+  }
+  
+}
